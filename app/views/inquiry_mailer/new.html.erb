@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <h1 class="text-center">お問い合わせ</h1>
-          <%= form_tag(topics_path, method: :get) do %>
+          <%= form_tag('redirect_to topics_path', method: :post) do %>
             <input type="text" name="name" placeholder="NAME">
             <input type="text" name="mail" placeholder="e-mail">
             <textarea  name="message" placeholder="MESSAGE"></textarea>

@@ -2,13 +2,19 @@ class Topic < ApplicationRecord
   validates :user_id, presence: true
   validates :description, presence: true
   validates :image, presence: true
+  validates :title, presence: true
   
   belongs_to :user
   
   mount_uploader :image, ImageUploader
+  has_many :favorites
+  has_many :favorite_users, through: :favorites, source: 'user'
   
-  def self.search(search)
-    return Topic.all unless search
-    Topic.where(['description LIKE ?', "%#{search}%"])
+  def self.search(search) 
+    if search
+      where(['description LIKE ?', "%#{search}%"]) 
+    else
+      all 
+    end
   end
 end

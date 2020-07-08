@@ -1,7 +1,7 @@
 class TopicsController < ApplicationController
   
   def index
-    @topics = Topic.all
+    @topics = Topic.search(params[:search])
   end
   
   def new
@@ -21,6 +21,6 @@ class TopicsController < ApplicationController
 
   private
   def topic_params
-    params.require(:topic).permit(:image, :description)
+    params.require(:topic).permit(:image, :description, :title)
   end
 end

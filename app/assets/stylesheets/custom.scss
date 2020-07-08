@@ -46,6 +46,10 @@ h1, h2 {
   height: 45px;
 }
 
+.form-title-control {
+  height: 20px;
+}
+
 .users-new-wrapper {
   width: 100vw;
   height: 100vh;
@@ -103,7 +107,7 @@ h1, h2 {
 }
 
 .topic-new-wrapper {
-  padding-top: 120px;
+  padding-top: 150px;
 }
 
 .topic-index-wrapper {
@@ -120,6 +124,13 @@ h1, h2 {
       padding-right: 20px;
       padding-left: 20px;
     }
+    
+    .topic-title {
+      padding-right: 20px;
+      padding-left: 20px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
 
     .topic-text {
       padding-right: 20px;
@@ -133,6 +144,12 @@ h1, h2 {
     }
 
     .topic-index-icon {
+      width: 35px;
+      height: 30px;
+      margin-left: 20px;
+    }
+    
+    .topic-index-icon-blue {
       width: 35px;
       height: 30px;
       margin-left: 20px;

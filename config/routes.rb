@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   resources :users
   resources :topics
   resources :searches,only:[:index]
+  
+  get 'favorites/index'
+  post '/favorites',  to:'favorites#create'
+  delete '/favorites', to: 'favorites#destroy'
 end
