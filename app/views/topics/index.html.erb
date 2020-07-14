@@ -24,9 +24,19 @@
             <% end %>
             <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
             
+            
+            <% if current_user.admin? %>
+             「いいね」してくれた方々 (<%= topic.favuser_list(topic.id).count %> 人) <br>
+              <% topic.favuser_list(topic.id).each do |user| %>
+                <%= user.name %>様  (<%= user.email %>)<br>
+              <% end %>
+            <% end %>
+
             <p class="topic-title">
-              <%=topic.title %>
+              タイトル:<%=topic.title %>
             </p>
+            
+              
             <p class="topic-text">
               <%= topic.description %>
             </p>

@@ -17,4 +17,8 @@ class Topic < ApplicationRecord
       all 
     end
   end
+  
+  def favuser_list(topic_id)
+    User.where(id: Favorite.where(topic_id: topic_id))
+  end
 end

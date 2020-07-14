@@ -1,5 +1,6 @@
 <div class="topic-index-wrapper">
   <div class="container">
+    <%= link_to '一覧へ戻る', topics_path, class: 'text-black' %>
     <% @favorite_topics.each do |topic| %>
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
@@ -9,9 +10,12 @@
             </h2>
             <%= image_tag topic.image.url %>
             <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
-            <p class="topic-text">
-              <%= topic.description %>
+            <p class="topic-title">
+              <%= topic.title %>
             </p>
+            <p2 class="topc-text">
+              <%= topic.description %>
+            </p2>
           </div>
         </div>
       </div>
