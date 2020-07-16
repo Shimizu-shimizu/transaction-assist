@@ -32,11 +32,13 @@
               <%= image_tag "icons/good.png" %>
             <% end %>
           </li>
+          <% if current_user.admin? %>
           <li>
             <%= link_to new_topic_path do %>
               <%= image_tag "icons/airplane.png" %>
             <% end %>
           </li>
+          <% end %>
           <li>
             <%= link_to logout_path, method: :delete do %>
               <%= image_tag "icons/logout.png" %>

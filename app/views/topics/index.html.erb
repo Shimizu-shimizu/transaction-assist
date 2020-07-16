@@ -2,6 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
+        
         <%= form_tag(topics_path, :method => "get") do %>
           <%= text_field_tag :search %> 
           <%= submit_tag "検索", class: "btn btn-primary"%> 
@@ -33,7 +34,8 @@
             <% end %>
 
             <p class="topic-title">
-              <%=topic.title %>
+              <p class="topic-title">タイトル</p>
+              <%= topic.title %>
             </p>
             
               
